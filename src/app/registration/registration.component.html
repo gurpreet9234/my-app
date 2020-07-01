@@ -1,0 +1,14 @@
+<p>registration works!</p>
+<form>
+  <mat-label>Name</mat-label>
+  <input type="text" name="username" class="form-control" [(ngModel)]="name">
+
+  <button mat-raised-button (click)="addName()">Add Name</button>
+  <button mat-raised-button (click)="getDate()">Get</button>
+  <button mat-raised-button (click)="submit()">submit</button>
+
+  <ul *ngIf="formData">
+    <li *ngFor="let candidate of formData"> {{candidate.name}} </li>
+  </ul>
+</form>
+
